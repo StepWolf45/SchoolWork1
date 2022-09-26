@@ -5,16 +5,19 @@ using namespace std;
 int itc_sqrt(int num){
     int i = 1;
     if (num < 0 || num > 46340)
-         return -1;
+        return -1;
     else if (num == 0){
-         return 0;
+        return 0;
     }
     while (i < num){
-        if (i * i == num){ return i; }
+        if (i * i == num){
+            return i;
+        }
         i++;
     }
     return -1;
 }
+
 double itc_pow(int num, int step) {
     double res = 1;
     long long kol ;
