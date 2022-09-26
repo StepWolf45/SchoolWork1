@@ -23,7 +23,7 @@ int itc_spr(int a, int b) {
 int itc_str(int a, int b, int c) {
     double p = (a + b + c) / 2;
     if ((a + b > c && a + c > b && b + c > a) && (a > 0 && b > 0 && c > 0)) {
-        return itc_sqrt((p * (p - a) * (p - b) * (p - c)));
+        return itc_sqrt(p * (p - a) * (p - b) * (p - c));
 
     }
     else {
