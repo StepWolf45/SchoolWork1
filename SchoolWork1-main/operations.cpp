@@ -3,8 +3,11 @@
 using namespace std;
 
 int itc_sqrt(int num) {
-    if(num>=0 && num <= 46340){
-        for (int i = 0; i * i <= num; ++i)
+    if(num==0){
+        return 0;
+    }
+    else if(num>=0 && num <= 46340){
+        for (int i = 1; i * i <= num; ++i)
             if (i * i == num) {
                 return i;
             }
