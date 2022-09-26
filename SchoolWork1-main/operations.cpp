@@ -2,19 +2,19 @@
 #include <iostream>
 using namespace std;
 
-int itc_sqrt(int num) {
-    if(num==0){
-        return 0;
+int itc_sqrt(int num){
+    int i = 1;
+    if (num < 0 || num > 46340)
+         return -1;
+    else if (num == 0){
+         return 0;
     }
-    else if(num>=0 && num <= 46340){
-        for (int i = 1; i * i <= num; ++i)
-            if (i * i == num) {
-                return i;
-            }
+    while (i < num){
+        if (i * i == num){ return i; }
+        i++;
     }
     return -1;
 }
-
 double itc_pow(int num, int step) {
     double res = 1;
     long long kol ;
